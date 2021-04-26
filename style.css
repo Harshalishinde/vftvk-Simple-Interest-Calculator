@@ -1,4 +1,34 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+body {
+    background-color:black;
+    font-family:arial;
+    color:white;
+    border-radius:25px;
+    }
+h1{
+    color:grey;
+    font-family:verdana;
+    text-align:left;
+    }
+.maindiv{
+    background-color:white;
+    color:black;
+    width:500px;
+    padding:10px;
+    border-radius:25px;
+    margin-left:80px;
+    }
+.div1{
+    margin-left:50px;
+    padding:10px;
+    display:grid;
+}
+footer{
+    text-align:left;
+}
+input, select{
+    border-radius: 7px;
+    grid-column: 2 / 3;
+}
+label{
+    grid-column: 1/2;
+}
