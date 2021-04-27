@@ -1,40 +1,54 @@
 <!DOCTYPE html>
+<html>
+    <title>Web App – Simple Interest Calculator</title>
     <head>
-    <title>Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        
         <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
-       <div class="div1">
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range"  id="rate" min="minval" max="maxval" value="default_val">
-        <span id="rate_val">10.25%</span>  <br/>
-        No. of Years <input type="number"  id="years"> 
-        <select is="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-
-        </select> <br/>
-        <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-
-        <p>If you deposit <mark>1000000</mark>,</br>
-        at an intrest rate of <mark>3.5%</mark>.</br>
-        You will receive amount of<mark>175000</mark>,</br>
-        In the year of <mark>2025</mark>.</p>
-   </div>
-        <footer>&#169; Harshali Shinde</footer>
-             </div>
+            <h1>Simple Interest Calculator</h1>
+            <div class='inputs'>
+            <form >
+                
+                <label for="principal">Amount</label>
+                <input type="number"  id="principal"  oninput="validity.valid||(value='');">  <br/>
+                <label for="rate">Rate</label>
+                <div class="range">
+                    <input type="range"  id="rate" min=1 max=20 step =0.25 value=10.25 onchange="updateRate()">
+                    <span id="rate_val">
+                        10.25%
+                    </span>
+                </div>
+                <br>
+                <label for="years">No. of Years</label>
+                <select id="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br><br>
+                
+            </form>
+            </div>
+            <div class="output">
+            <button onclick="compute()">Compute Interest</button>
+            <br><br>
+            <span id="result">
+            </span>
+            </div>
+            <br>
+            <footer>
+                &#169;  Everyone Can Get Rich
+            </footer>
+        </div>
     </body>
 </html>
